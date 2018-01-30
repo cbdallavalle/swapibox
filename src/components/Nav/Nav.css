@@ -1,0 +1,100 @@
+ @font-face { font-family: deathStar; src: url('../../styles/deathStar.otf'); } 
+
+
+ a {
+  display: block;
+  height: 20px;
+  font-family: 'Dhurjati', sans-serif;
+  text-decoration: none;
+  font-size: 23px;
+  color: white;
+ }
+
+ a h1 {
+  margin: 20px auto 40px auto;
+  padding: 6px;
+  width: 300px;
+  background-color: #ffffff3b;
+  border-radius: 20px;
+  color: white;
+  font-family: deathStar, sans-serif;
+  font-size: 25px;
+ }
+
+ button {
+  padding: 6px 25px 24px 25px;
+  background-color: #ffffff3b;
+  border: 2px solid white;
+  border-left: none;
+ }
+
+ button:hover,
+ button:active,
+ button:focus {
+  background-color: #ffffffad;
+  outline: none;
+ }
+
+ nav {
+  height: 290px;
+  background-image: url('../../styles/space.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.nav-btns-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  width: 100%;
+  height: 50px;
+}
+
+.nav-img {
+  height: 40px;
+}
+
+.title-cont {
+  height: 180px;
+}
+
+#death-star {
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  width: 200px;
+}
+
+#empire-logo {
+  margin-top: 20px;
+  width: 60px;
+}
+
+#people {
+  border-left: 2px solid white;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+#targets {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+@media only screen and (max-width: 380px) {
+  .nav-img {
+    height: 30px;
+  }
+
+  button {
+    padding: 9px 20px 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 853px) {
+  #death-star {
+    display: none;
+  }
+}
