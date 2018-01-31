@@ -6,7 +6,7 @@ const Home = () => {
     <article className="Home">
       <p> 
         It is a period of civil war. 
-        Rebel spaceships, striking from a hidden base, have won their first victory 
+        Rebel scum spaceships, striking from a hidden base, have won their first and only victory 
         against the great Galactic Empire. During the battle, Rebel scum spies managed 
         to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, 
         an armored space station with enough power to destroy an entire planet.
