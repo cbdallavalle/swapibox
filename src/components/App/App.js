@@ -12,6 +12,7 @@ class App extends Component {
       vehiclesToRender: [],
       planetsToRender: [],
       swapiRepo: {},
+      targets: [],
     }
   }
 
@@ -41,6 +42,13 @@ class App extends Component {
     this.setState({ planetsToRender: this.state.swapiRepo.planets });
   }
 
+  addTarget = (target) => {
+    if(!(this.state.targets.find(obj => obj.name === target.name))) {
+      const targets = [...this.state.targets, target];
+      this.setState({targets})
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -51,6 +59,8 @@ class App extends Component {
         <Main peopleToRender={ this.state.peopleToRender } 
               vehiclesToRender={ this.state.vehiclesToRender }
               planetsToRender={ this.state.planetsToRender }
+              targetsToRender={ this.state.targets }
+              addTarget={ this.addTarget }
         />
       </div>
     );

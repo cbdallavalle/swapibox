@@ -1,0 +1,15 @@
+.no-targets-cont {
+  width: 80%;
+  margin: 50px auto;
+  height: 500px;
+  background-color: #ffffff3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-targets {
+  font-size: 40px;
+  color: #191919;
+  font-family: impact;
+}
