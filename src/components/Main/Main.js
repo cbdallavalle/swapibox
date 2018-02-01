@@ -6,26 +6,28 @@ import Home from '../Home/Home';
 import './Main.css';
 
 
-const Main = (props) => {
+const Main = ({cardsToRender, targetsToRender, toggleTarget }) => {
   return(
     <main>
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/people' component={ () => 
-          <CardContainer cardsToRender={ props.peopleToRender } 
-                         addTarget={ props.addTarget }
+          <CardContainer cardsToRender={ cardsToRender } 
+                         toggleTarget={ toggleTarget }
           /> } 
         />
         <Route path='/planets' component={() => 
-          <CardContainer cardsToRender={ props.planetsToRender } 
-                         addTarget={ props.addTarget }
+          <CardContainer cardsToRender={ cardsToRender } 
+                         toggleTarget={ toggleTarget }
           /> } 
         />
         <Route path='/vehicles' component={() => 
-          <CardContainer cardsToRender={ props.vehiclesToRender } /> } 
+          <CardContainer cardsToRender={ cardsToRender } /> } 
         />
         <Route path='/targets' component={() => 
-          <Favorites targetsToRender={ props.targetsToRender } /> } 
+          <Favorites targetsToRender={ targetsToRender } 
+                     toggleTarget={ toggleTarget }
+          /> } 
         />
       </Switch>
     </main>

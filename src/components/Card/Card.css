@@ -1,0 +1,42 @@
+h2, span {
+  font-family: impact;
+}
+
+span {
+  color: #ccc8c8;
+  font-size: 19px;
+}
+
+hr {
+  width: 80%;
+  border: 1.5px solid white;
+}
+
+.cards {
+  position: relative;
+  background-color: #ffffff3b;
+  width: 260px;
+  height: 240px;
+  padding-top: 7px;
+  border-radius: 19px;
+  margin: 10px;
+  border: 2px solid white;
+}
+
+.cards:hover {
+  cursor: pointer;
+  background-color: #ffffffad;
+  outline: none;
+}
+
+.target-img {
+  width: 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#marked {
+  background-color: #9d797752;
+  border: 2px solid #A13B37;
+}

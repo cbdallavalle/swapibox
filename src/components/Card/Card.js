@@ -1,8 +1,9 @@
 import React from 'react';
 import target from '../../styles/bullseye.svg';
+import './Card.css';
 
-const Card = ({card, addTarget}) => {
-  const { name, species, homeworld, homePop } = card;
+const Card = ({card, toggleTarget }) => {
+  const { name, species, homeworld, homePop, marked } = card;
   const { population, terrain, climate } = card;
   const { model, vehicleClass, passengers } = card
 
@@ -16,7 +17,8 @@ const Card = ({card, addTarget}) => {
           <h4><span>population:</span> {homePop}</h4>
         </div>
       )
-    } else if (terrain) {
+    } 
+    else if (terrain) {
       return (
         <div>
           <img className="target-img" src={target} alt="target" />
@@ -38,7 +40,8 @@ const Card = ({card, addTarget}) => {
 
   return (
     <article className="cards" 
-             onClick={ () => addTarget(card) }
+             id={marked}
+             onClick={ () => toggleTarget(card) }
     >
       <h2>{name}</h2>
       <hr />

@@ -2,8 +2,9 @@ import React from 'react';
 import vader from '../../styles/vader3.jpg';
 import patience from '../../styles/patience.gif';
 import Card from '../Card/Card';
+import './CardContainer.css';
 
-const CardContainer = ({cardsToRender, addTarget}) => {
+const CardContainer = ({cardsToRender, toggleTarget}) => {
   const cards = () => {
     if(!cardsToRender.length) {
       return (
@@ -17,7 +18,7 @@ const CardContainer = ({cardsToRender, addTarget}) => {
         return (
           <Card key={ i }
                 card={ card }
-                addTarget={ addTarget }
+                toggleTarget={ toggleTarget }
           />
         )
       })
@@ -25,7 +26,7 @@ const CardContainer = ({cardsToRender, addTarget}) => {
   }
   
   return (
-    <section className="Containers">
+    <section className="CardContainer">
       { cards() }
     </section>
   )
