@@ -1,21 +1,32 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
-import People from '../People/People';
-import Planets from '../Planets/Planets';
-import Vehicles from '../Vehicles/Vehicles';
 import Favorites from '../Favorites/Favorites';
+import CardContainer from '../CardContainer/CardContainer';
 import Home from '../Home/Home';
 import './Main.css';
+
 
 const Main = (props) => {
   return(
     <main>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/people' component={() => <People peopleToRender={ props.peopleToRender } /> } />
-        <Route path='/planets' component={() => <Planets planetsToRender={ props.planetsToRender } /> } />
-        <Route path='/vehicles' component={() => <Vehicles vehiclesToRender={ props.vehiclesToRender } /> } />
-        <Route path='/targets' component={Favorites} />
+        <Route path='/people' component={ () => 
+          <CardContainer cardsToRender={ props.peopleToRender } 
+                         addTarget={ props.addTarget }
+          /> } 
+        />
+        <Route path='/planets' component={() => 
+          <CardContainer cardsToRender={ props.planetsToRender } 
+                         addTarget={ props.addTarget }
+          /> } 
+        />
+        <Route path='/vehicles' component={() => 
+          <CardContainer cardsToRender={ props.vehiclesToRender } /> } 
+        />
+        <Route path='/targets' component={() => 
+          <Favorites targetsToRender={ props.targetsToRender } /> } 
+        />
       </Switch>
     </main>
   )
