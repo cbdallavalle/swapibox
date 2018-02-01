@@ -6,7 +6,6 @@ class swapiRepository {
   }
 
   async cleanPeopleData(data) {
-    console.log('peeps');
     const peopleFetch = await fetch(data);
     const peopleArr = await peopleFetch.json();
     const people = await this.getPeopleDetails(peopleArr);
@@ -31,12 +30,11 @@ class swapiRepository {
 
   async fetchSpecies(url) {
     const speciesFetch = await fetch(url);
-    const species = speciesFetch.json();
+    const species = await speciesFetch.json();
     return ({ species: species.name })
   }
 
   async cleanPlanetData(url) {
-    console.log('planets');
     const planetFetch = await fetch(url);
     const planetArr = await planetFetch.json();
     const planets = await this.getPlanetDetails(planetArr);
@@ -67,7 +65,6 @@ class swapiRepository {
   } 
 
   async cleanVehicleData(vehicleUrl) {
-    console.log('vehicles');
     const vehiclesFetch = await fetch(vehicleUrl);
     const vehiclesArr = await vehiclesFetch.json();
     const vehicles = await this.getVehicleDetails(vehiclesArr.results);
@@ -79,7 +76,7 @@ class swapiRepository {
       return({
         name: vehicle.name,
         model: vehicle.model,
-        class: vehicle.vehicle_class,
+        vehicleClass: vehicle.vehicle_class,
         passengers: vehicle.passengers
       })
     })

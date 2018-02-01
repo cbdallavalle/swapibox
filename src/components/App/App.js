@@ -8,28 +8,50 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      people: {},
-      planets: {},
-      vehicles: {}
+      peopleToRender: [],
+      vehiclesToRender: [],
+      planetsToRender: [],
+      swapiRepo: {},
     }
   }
 
-  async componentDidMount() {
-    const swapi = new swapiRepository();
-    // await swapi.cleanPlanetData("https://swapi.co/api/planets/?page=1");
-    await swapi.cleanPeopleData("https://swapi.co/api/people/?page=1");
-    // await swapi.cleanVehicleData("https://swapi.co/api/vehicles/?page=1");
-      // vehicles: swapi.vehicles
-      // people: swapi.people, 
-    this.setState({ people: swapi.people })
+  componentDidMount() {
+    const swapiRepo = new swapiRepository();
+    this.setState({ swapiRepo })
+  }
+
+  renderPeople = async() => {
+    if(!this.state.peopleToRender.length) {
+      await this.state.swapiRepo.cleanPeopleData("https://swapi.co/api/people/?page=1"); 
+    }
+    this.setState({ peopleToRender: this.state.swapiRepo.people });
+  }
+
+  renderVehicles = async() => {
+    if(!this.state.vehiclesToRender.length) {
+      await this.state.swapiRepo.cleanVehicleData("https://swapi.co/api/vehicles/?page=1")
+    }
+    this.setState({ vehiclesToRender: this.state.swapiRepo.vehicles });
+  }
+
+  renderPlanets = async() => {
+    if(!this.state.planetsToRender.length) {
+      await this.state.swapiRepo.cleanPlanetData("https://swapi.co/api/planets/?page=1");
+    }
+    this.setState({ planetsToRender: this.state.swapiRepo.planets });
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
-        <Nav />
-        <Main />
+        <Nav renderPeople={ this.renderPeople } 
+             renderVehicles={ this.renderVehicles }
+             renderPlanets={ this.renderPlanets }
+        />
+        <Main peopleToRender={ this.state.peopleToRender } 
+              vehiclesToRender={ this.state.vehiclesToRender }
+              planetsToRender={ this.state.planetsToRender }
+        />
       </div>
     );
   }
