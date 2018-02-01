@@ -1,8 +1,8 @@
 class swapiRepository {
   constructor() {
-    this.people = {};
-    this.planets = {};
-    this.vehicles = {};
+    this.people = [];
+    this.planets = [];
+    this.vehicles = [];
   }
 
   async cleanPeopleData(data) {

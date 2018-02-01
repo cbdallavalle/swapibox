@@ -1,10 +1,12 @@
 import swapiRepository from './helper.test.js';
 
+  it('should exist', () => {
+    const swapiInfo = new swapiRepository();
+    expect(swapiInfo).toBeDefined();
+  })
+
 describe('cleanData', () => {
 
-  it('should make an api call based on the data passed in', () => {
-    const swapiInfo = new swapiRepository();
-  })
 })
 
 

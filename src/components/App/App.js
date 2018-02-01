@@ -8,8 +8,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      peopleToRender: [],
-      vehiclesToRender: [],
+      cardsToRender: [],
       planetsToRender: [],
       swapiRepo: {},
       targets: [],
@@ -22,30 +21,35 @@ class App extends Component {
   }
 
   renderPeople = async() => {
-    if(!this.state.peopleToRender.length) {
+    if(!this.state.swapiRepo.people.length) {
       await this.state.swapiRepo.cleanPeopleData("https://swapi.co/api/people/?page=1"); 
     }
-    this.setState({ peopleToRender: this.state.swapiRepo.people });
+    this.setState({ cardsToRender: this.state.swapiRepo.people });
   }
 
   renderVehicles = async() => {
-    if(!this.state.vehiclesToRender.length) {
+    if(!this.state.swapiRepo.vehicles.length) {
       await this.state.swapiRepo.cleanVehicleData("https://swapi.co/api/vehicles/?page=1")
     }
-    this.setState({ vehiclesToRender: this.state.swapiRepo.vehicles });
+    this.setState({ cardsToRender: this.state.swapiRepo.vehicles });
   }
 
   renderPlanets = async() => {
-    if(!this.state.planetsToRender.length) {
+    if(!this.state.swapiRepo.planets.length) {
       await this.state.swapiRepo.cleanPlanetData("https://swapi.co/api/planets/?page=1");
     }
-    this.setState({ planetsToRender: this.state.swapiRepo.planets });
+    this.setState({ cardsToRender: this.state.swapiRepo.planets });
   }
 
-  addTarget = (target) => {
+  toggleTarget = (target) => {
     if(!(this.state.targets.find(obj => obj.name === target.name))) {
+      target.marked = 'marked';
       const targets = [...this.state.targets, target];
       this.setState({targets})
+    } else if (target.marked) {
+        delete target.marked;
+        let targets = this.state.targets.filter(obj => obj.name !== target.name)
+        this.setState({targets})
     }
   }
 
@@ -56,11 +60,9 @@ class App extends Component {
              renderVehicles={ this.renderVehicles }
              renderPlanets={ this.renderPlanets }
         />
-        <Main peopleToRender={ this.state.peopleToRender } 
-              vehiclesToRender={ this.state.vehiclesToRender }
-              planetsToRender={ this.state.planetsToRender }
+        <Main cardsToRender={ this.state.cardsToRender } 
               targetsToRender={ this.state.targets }
-              addTarget={ this.addTarget }
+              toggleTarget={ this.toggleTarget }
         />
       </div>
     );
