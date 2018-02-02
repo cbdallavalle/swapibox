@@ -9,7 +9,6 @@ class App extends Component {
     super();
     this.state = {
       cardsToRender: [],
-      planetsToRender: [],
       swapiRepo: {},
       targets: [],
     }
@@ -19,7 +18,7 @@ class App extends Component {
     const swapiRepo = new swapiRepository();
     this.setState({ swapiRepo })
   }
-
+  
   renderPeople = async() => {
     if(!this.state.swapiRepo.people.length) {
       await this.state.swapiRepo.cleanPeopleData("https://swapi.co/api/people/?page=1"); 
@@ -42,11 +41,11 @@ class App extends Component {
   }
 
   toggleTarget = (target) => {
-    if(!(this.state.targets.find(obj => obj.name === target.name))) {
+    if(!target.marked) {
       target.marked = 'marked';
       const targets = [...this.state.targets, target];
       this.setState({targets})
-    } else if (target.marked) {
+    } else {
         delete target.marked;
         let targets = this.state.targets.filter(obj => obj.name !== target.name)
         this.setState({targets})

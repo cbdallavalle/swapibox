@@ -8,7 +8,7 @@ import target from '../../styles/bullseye.svg';
 import deathStar from '../../styles/deathStar.png';
 import './Nav.css';
 
-const Nav = (props) => {
+const Nav = ({ renderPeople, renderPlanets, renderVehicles }) => {
   return(
     <nav>
     <div className="title-cont">
@@ -19,30 +19,30 @@ const Nav = (props) => {
     </div>
       <div className="nav-btns-cont">
         <button id="people"
-                onClick={ props.renderPeople }
+                onClick={ renderPeople }
         >
           <Link to='/people'>
-            <img className="nav-img" src={people} alt="search people" />
+            <img className="nav-img" src={ people } alt="search people" />
           </Link>
         </button>
-        <button onClick={ props.renderPlanets }>
+        <button onClick={ renderPlanets }>
           <Link to='/planets'>
-            <img className="nav-img" src={planet} alt="search people" />
+            <img className="nav-img" src={ planet } alt="search people" />
           </Link>
         </button>
-        <button onClick={ props.renderVehicles }>
+        <button onClick={ renderVehicles }>
           <Link to='/vehicles'>
-            <img className="nav-img" src={vehicle} alt="search people" />
+            <img className="nav-img" src={ vehicle } alt="search people" />
           </Link>
         </button>
         <button id="targets"
         >
           <Link to='/targets'>
-            <img className="nav-img" src={target} alt="search people" />
+            <img className="nav-img" src={ target } alt="search people" />
           </Link>
         </button>
       </div>
-    <img id="death-star" src={deathStar} />
+    <img id="death-star" src={ deathStar } />
     </nav>
   )
 }

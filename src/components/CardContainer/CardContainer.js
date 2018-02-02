@@ -4,7 +4,7 @@ import patience from '../../styles/patience.gif';
 import Card from '../Card/Card';
 import './CardContainer.css';
 
-const CardContainer = ({cardsToRender, toggleTarget}) => {
+const CardContainer = ({ cardsToRender, toggleTarget }) => {
   const cards = () => {
     if(!cardsToRender.length) {
       return (

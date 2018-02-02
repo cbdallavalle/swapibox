@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import './Favorites.css';
 
-const Favorites = ({targetsToRender, toggleTarget}) => {
+const Favorites = ( { targetsToRender, toggleTarget } ) => {
   const targets = () => {
     if(!targetsToRender.length) {
       return (

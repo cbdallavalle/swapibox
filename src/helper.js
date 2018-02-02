@@ -5,12 +5,22 @@ class swapiRepository {
     this.vehicles = [];
   }
 
-  async cleanPeopleData(data) {
-    const peopleFetch = await fetch(data);
-    const peopleArr = await peopleFetch.json();
-    const people = await this.getPeopleDetails(peopleArr);
+  async fetchData(url) {
+    const initialFetch = await fetch(url);
+    const fetchedObj = await initialFetch.json();
+    return fetchedObj
+  }
+
+  async cleanPeopleData(url) {
+    const peopleObj = await this.fetchData(url);
+    const people = await this.getPeopleDetails(peopleObj);
     this.people = people;
   }
+
+  //cleanPeopleData
+  //get mock data and it's going to return a cleanPeopleData
+  //pass data from window fetch to peopleDetails
+  //make fetchData equal to whatever mockData being used
 
   getPeopleDetails(peopleArr) {
     const people = peopleArr.results.map( async(person) => {
@@ -23,20 +33,17 @@ class swapiRepository {
   }
 
   async fetchHomeworld(url) {
-    const homeworldFetch = await fetch(url);
-    const homeworld = await homeworldFetch.json();
+    const homeworld = await this.fetchData(url);
     return ({ homeworld: homeworld.name, homePop: homeworld.population })
   }
 
   async fetchSpecies(url) {
-    const speciesFetch = await fetch(url);
-    const species = await speciesFetch.json();
+    const species = await this.fetchData(url);
     return ({ species: species.name })
   }
 
   async cleanPlanetData(url) {
-    const planetFetch = await fetch(url);
-    const planetArr = await planetFetch.json();
+    const planetArr = await this.fetchData(url);
     const planets = await this.getPlanetDetails(planetArr);
     this.planets = planets;
   }
@@ -56,17 +63,15 @@ class swapiRepository {
   }
 
   fetchResidents(residentsArr) {
-    const residents = residentsArr.map( async (residentUrl) => {
-      const residentFetch = await fetch(residentUrl);
-      const resident = await residentFetch.json();
+    const residents = residentsArr.map( async (url) => {
+      const resident = await this.fetchData(url);
       return ({ resident: resident.name })
     })
     return Promise.all(residents)
   } 
 
-  async cleanVehicleData(vehicleUrl) {
-    const vehiclesFetch = await fetch(vehicleUrl);
-    const vehiclesArr = await vehiclesFetch.json();
+  async cleanVehicleData(url) {
+    const vehiclesArr = await this.fetchData(url);
     const vehicles = await this.getVehicleDetails(vehiclesArr.results);
     this.vehicles = vehicles;
   }

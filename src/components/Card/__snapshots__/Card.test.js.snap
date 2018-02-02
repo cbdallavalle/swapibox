@@ -1,0 +1,1322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot when passed data for people 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    card={
+        Object {
+            "homePop": "200000",
+            "homeworld": "Tatooine",
+            "name": "Darth Vader",
+            "species": "Human",
+          }
+    }
+    toggleTarget={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Darth Vader
+</h2>,
+        <hr />,
+        <div>
+          <img
+                    alt="target"
+                    className="target-img"
+                    src="bullseye.svg"
+          />
+          <h4>
+                    <span>
+                              species:
+                    </span>
+                     
+                    Human
+          </h4>
+          <h4>
+                    <span>
+                              homeworld:
+                    </span>
+                     
+                    Tatooine
+          </h4>
+          <h4>
+                    <span>
+                              population:
+                    </span>
+                     
+                    200000
+          </h4>
+</div>,
+      ],
+      "className": "cards",
+      "id": undefined,
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Darth Vader",
+        },
+        "ref": null,
+        "rendered": "Darth Vader",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="target"
+              className="target-img"
+              src="bullseye.svg"
+/>,
+            <h4>
+              <span>
+                            species:
+              </span>
+               
+              Human
+</h4>,
+            <h4>
+              <span>
+                            homeworld:
+              </span>
+               
+              Tatooine
+</h4>,
+            <h4>
+              <span>
+                            population:
+              </span>
+               
+              200000
+</h4>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "target",
+              "className": "target-img",
+              "src": "bullseye.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  species:
+</span>,
+                " ",
+                "Human",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "species:",
+                },
+                "ref": null,
+                "rendered": "species:",
+                "type": "span",
+              },
+              " ",
+              "Human",
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  homeworld:
+</span>,
+                " ",
+                "Tatooine",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "homeworld:",
+                },
+                "ref": null,
+                "rendered": "homeworld:",
+                "type": "span",
+              },
+              " ",
+              "Tatooine",
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  population:
+</span>,
+                " ",
+                "200000",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "population:",
+                },
+                "ref": null,
+                "rendered": "population:",
+                "type": "span",
+              },
+              " ",
+              "200000",
+            ],
+            "type": "h4",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Darth Vader
+</h2>,
+          <hr />,
+          <div>
+            <img
+                        alt="target"
+                        className="target-img"
+                        src="bullseye.svg"
+            />
+            <h4>
+                        <span>
+                                    species:
+                        </span>
+                         
+                        Human
+            </h4>
+            <h4>
+                        <span>
+                                    homeworld:
+                        </span>
+                         
+                        Tatooine
+            </h4>
+            <h4>
+                        <span>
+                                    population:
+                        </span>
+                         
+                        200000
+            </h4>
+</div>,
+        ],
+        "className": "cards",
+        "id": undefined,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Darth Vader",
+          },
+          "ref": null,
+          "rendered": "Darth Vader",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="target"
+                className="target-img"
+                src="bullseye.svg"
+/>,
+              <h4>
+                <span>
+                                species:
+                </span>
+                 
+                Human
+</h4>,
+              <h4>
+                <span>
+                                homeworld:
+                </span>
+                 
+                Tatooine
+</h4>,
+              <h4>
+                <span>
+                                population:
+                </span>
+                 
+                200000
+</h4>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "target",
+                "className": "target-img",
+                "src": "bullseye.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    species:
+</span>,
+                  " ",
+                  "Human",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "species:",
+                  },
+                  "ref": null,
+                  "rendered": "species:",
+                  "type": "span",
+                },
+                " ",
+                "Human",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    homeworld:
+</span>,
+                  " ",
+                  "Tatooine",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "homeworld:",
+                  },
+                  "ref": null,
+                  "rendered": "homeworld:",
+                  "type": "span",
+                },
+                " ",
+                "Tatooine",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    population:
+</span>,
+                  " ",
+                  "200000",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "population:",
+                  },
+                  "ref": null,
+                  "rendered": "population:",
+                  "type": "span",
+                },
+                " ",
+                "200000",
+              ],
+              "type": "h4",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot when passed data for planets 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    card={
+        Object {
+            "climate": "temperate",
+            "name": "Alderaan",
+            "population": "2000000000",
+            "residents": Array [
+              Object {
+                "resident": "Leia Organa",
+              },
+              Object {
+                "resident": "Bail Prestor Organa",
+              },
+              Object {
+                "resident": "Raymus Antilles",
+              },
+            ],
+            "terrain": "grasslands, mountains",
+          }
+    }
+    toggleTarget={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Alderaan
+</h2>,
+        <hr />,
+        <div>
+          <img
+                    alt="target"
+                    className="target-img"
+                    src="bullseye.svg"
+          />
+          <h4>
+                    <span>
+                              population: 
+                    </span>
+                    2000000000
+          </h4>
+          <h4>
+                    <span>
+                              terrain: 
+                    </span>
+                    grasslands, mountains
+          </h4>
+          <h4>
+                    <span>
+                              climate: 
+                    </span>
+                    temperate
+          </h4>
+</div>,
+      ],
+      "className": "cards",
+      "id": undefined,
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Alderaan",
+        },
+        "ref": null,
+        "rendered": "Alderaan",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="target"
+              className="target-img"
+              src="bullseye.svg"
+/>,
+            <h4>
+              <span>
+                            population: 
+              </span>
+              2000000000
+</h4>,
+            <h4>
+              <span>
+                            terrain: 
+              </span>
+              grasslands, mountains
+</h4>,
+            <h4>
+              <span>
+                            climate: 
+              </span>
+              temperate
+</h4>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "target",
+              "className": "target-img",
+              "src": "bullseye.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  population: 
+</span>,
+                "2000000000",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "population: ",
+                },
+                "ref": null,
+                "rendered": "population: ",
+                "type": "span",
+              },
+              "2000000000",
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  terrain: 
+</span>,
+                "grasslands, mountains",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "terrain: ",
+                },
+                "ref": null,
+                "rendered": "terrain: ",
+                "type": "span",
+              },
+              "grasslands, mountains",
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  climate: 
+</span>,
+                "temperate",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "climate: ",
+                },
+                "ref": null,
+                "rendered": "climate: ",
+                "type": "span",
+              },
+              "temperate",
+            ],
+            "type": "h4",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Alderaan
+</h2>,
+          <hr />,
+          <div>
+            <img
+                        alt="target"
+                        className="target-img"
+                        src="bullseye.svg"
+            />
+            <h4>
+                        <span>
+                                    population: 
+                        </span>
+                        2000000000
+            </h4>
+            <h4>
+                        <span>
+                                    terrain: 
+                        </span>
+                        grasslands, mountains
+            </h4>
+            <h4>
+                        <span>
+                                    climate: 
+                        </span>
+                        temperate
+            </h4>
+</div>,
+        ],
+        "className": "cards",
+        "id": undefined,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Alderaan",
+          },
+          "ref": null,
+          "rendered": "Alderaan",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="target"
+                className="target-img"
+                src="bullseye.svg"
+/>,
+              <h4>
+                <span>
+                                population: 
+                </span>
+                2000000000
+</h4>,
+              <h4>
+                <span>
+                                terrain: 
+                </span>
+                grasslands, mountains
+</h4>,
+              <h4>
+                <span>
+                                climate: 
+                </span>
+                temperate
+</h4>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "target",
+                "className": "target-img",
+                "src": "bullseye.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    population: 
+</span>,
+                  "2000000000",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "population: ",
+                  },
+                  "ref": null,
+                  "rendered": "population: ",
+                  "type": "span",
+                },
+                "2000000000",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    terrain: 
+</span>,
+                  "grasslands, mountains",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "terrain: ",
+                  },
+                  "ref": null,
+                  "rendered": "terrain: ",
+                  "type": "span",
+                },
+                "grasslands, mountains",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    climate: 
+</span>,
+                  "temperate",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "climate: ",
+                  },
+                  "ref": null,
+                  "rendered": "climate: ",
+                  "type": "span",
+                },
+                "temperate",
+              ],
+              "type": "h4",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot when passed data for vehicles 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    card={
+        Object {
+            "model": "Digger Crawler",
+            "name": "Sand Crawler",
+            "passengers": "30",
+            "vehicleClass": "wheeled",
+          }
+    }
+    toggleTarget={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Sand Crawler
+</h2>,
+        <hr />,
+        <div>
+          <h4>
+                    <span>
+                              model:
+                    </span>
+                     
+                    Digger Crawler
+          </h4>
+          <h4>
+                    <span>
+                              class:
+                    </span>
+                     
+                    wheeled
+          </h4>
+          <h4>
+                    <span>
+                              passengers:
+                    </span>
+                     
+                    30
+          </h4>
+</div>,
+      ],
+      "className": "cards",
+      "id": undefined,
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Sand Crawler",
+        },
+        "ref": null,
+        "rendered": "Sand Crawler",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h4>
+              <span>
+                            model:
+              </span>
+               
+              Digger Crawler
+</h4>,
+            <h4>
+              <span>
+                            class:
+              </span>
+               
+              wheeled
+</h4>,
+            <h4>
+              <span>
+                            passengers:
+              </span>
+               
+              30
+</h4>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  model:
+</span>,
+                " ",
+                "Digger Crawler",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "model:",
+                },
+                "ref": null,
+                "rendered": "model:",
+                "type": "span",
+              },
+              " ",
+              "Digger Crawler",
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  class:
+</span>,
+                " ",
+                "wheeled",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "class:",
+                },
+                "ref": null,
+                "rendered": "class:",
+                "type": "span",
+              },
+              " ",
+              "wheeled",
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span>
+                  passengers:
+</span>,
+                " ",
+                "30",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "passengers:",
+                },
+                "ref": null,
+                "rendered": "passengers:",
+                "type": "span",
+              },
+              " ",
+              "30",
+            ],
+            "type": "h4",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Sand Crawler
+</h2>,
+          <hr />,
+          <div>
+            <h4>
+                        <span>
+                                    model:
+                        </span>
+                         
+                        Digger Crawler
+            </h4>
+            <h4>
+                        <span>
+                                    class:
+                        </span>
+                         
+                        wheeled
+            </h4>
+            <h4>
+                        <span>
+                                    passengers:
+                        </span>
+                         
+                        30
+            </h4>
+</div>,
+        ],
+        "className": "cards",
+        "id": undefined,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sand Crawler",
+          },
+          "ref": null,
+          "rendered": "Sand Crawler",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h4>
+                <span>
+                                model:
+                </span>
+                 
+                Digger Crawler
+</h4>,
+              <h4>
+                <span>
+                                class:
+                </span>
+                 
+                wheeled
+</h4>,
+              <h4>
+                <span>
+                                passengers:
+                </span>
+                 
+                30
+</h4>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    model:
+</span>,
+                  " ",
+                  "Digger Crawler",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "model:",
+                  },
+                  "ref": null,
+                  "rendered": "model:",
+                  "type": "span",
+                },
+                " ",
+                "Digger Crawler",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    class:
+</span>,
+                  " ",
+                  "wheeled",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "class:",
+                  },
+                  "ref": null,
+                  "rendered": "class:",
+                  "type": "span",
+                },
+                " ",
+                "wheeled",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    passengers:
+</span>,
+                  " ",
+                  "30",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "passengers:",
+                  },
+                  "ref": null,
+                  "rendered": "passengers:",
+                  "type": "span",
+                },
+                " ",
+                "30",
+              ],
+              "type": "h4",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
