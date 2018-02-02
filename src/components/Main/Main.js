@@ -6,7 +6,7 @@ import Home from '../Home/Home';
 import './Main.css';
 
 
-const Main = ({cardsToRender, targetsToRender, toggleTarget }) => {
+const Main = ({ cardsToRender, targetsToRender, toggleTarget }) => {
   return(
     <main>
       <Switch>

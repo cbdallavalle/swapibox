@@ -3,6 +3,7 @@ import target from '../../styles/bullseye.svg';
 import './Card.css';
 
 const Card = ({card, toggleTarget }) => {
+  console.log(card);
   const { name, species, homeworld, homePop, marked } = card;
   const { population, terrain, climate } = card;
   const { model, vehicleClass, passengers } = card

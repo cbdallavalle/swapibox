@@ -1,27 +1,57 @@
-import swapiRepository from './helper.test.js';
+import swapiRepository from './helper.js';
+import mockData from './mockData/mockData';
 
+describe('default', () => {
+    const swapiRepo = new swapiRepository();
+  
   it('should exist', () => {
-    const swapiInfo = new swapiRepository();
-    expect(swapiInfo).toBeDefined();
+    expect(swapiRepo).toBeDefined;
   })
 
-describe('cleanData', () => {
+  it('should default to an empty array for the people, planets and vehicles key', () => {
+    expect(swapiRepo.people).toEqual([]);
+    expect(swapiRepo.planets).toEqual([]);
+    expect(swapiRepo.vehicles).toEqual([]);
+  })
+})
 
+describe('fetchData', () => {
+  const swapiRepo = new swapiRepository;
+
+  beforeEach( () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({mockData})
+    }))
+  })
+
+  it('should exist', async () => {
+    const something = await swapiRepo.fetchData("https://swapi.co/api/people/?page=1")
+    expect(swapiRepo.fetchData("https://swapi.co/api/people/?page=1")).resolves.toEqual(mockData)
+  })
 })
 
 
-// describe('DistrictRepository iteration 0', () =>  {
-//   const district = new DistrictRepository(kinderData);
+// swapiRepo = new swapiRepository();
+//     window.fetch = jest.fn().mockImplementation(() => {
+//       return (
+//         new Promise(resolve => {
+//           resolve(json: () => {
+//             return (
+//               new Promise(resolve => {
+//                 resolve(fetchArray: mockData)
+//                 })
+//               )
+//           })
+//         })
+//       )
+//     })
 
-//   test('district has data in an object', () => {
-//     // remember that an array is also just an object.
-//     expect(typeof district.data).toBe('object');
-//   });
 
-//   test('data coming in has no duplicates', () => {
-//     // uncomment out the tests that best fits your model
-//     // expect(district.data.length).toBe(181);
-//     expect(Object.keys(district.data).length).toBe(181);
-//   });
 
-// });
+
+
+// window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+//       json: () => Promise.resolve({
+//         groceries: mockGroceries,
+//       })
+//     }))
