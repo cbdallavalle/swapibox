@@ -20,13 +20,13 @@ describe('fetchData', () => {
 
   beforeEach( () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      json: () => Promise.resolve({mockData})
+      json: () => Promise.resolve(mockData)
     }))
   })
 
   it('should exist', async () => {
-    const something = await swapiRepo.fetchData("https://swapi.co/api/people/?page=1")
-    expect(swapiRepo.fetchData("https://swapi.co/api/people/?page=1")).resolves.toEqual(mockData)
+    const something = await swapiRepo.fetchData("url")
+    expect(swapiRepo.fetchData("url")).toEqual(mockData)
   })
 })
 

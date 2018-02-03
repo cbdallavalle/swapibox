@@ -14,31 +14,38 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const swapiRepo = new swapiRepository();
     this.setState({ swapiRepo })
   }
+
+  renderCards = async(type) => {
+    if(!this.state.swapiRepo[type].length) {
+      await this.state.swapiRepo.cleanData(type)
+    }
+    this.setState({ cardsToRender: this.state.swapiRepo[type]})
+  }
   
-  renderPeople = async() => {
-    if(!this.state.swapiRepo.people.length) {
-      await this.state.swapiRepo.cleanPeopleData("https://swapi.co/api/people/?page=1"); 
-    }
-    this.setState({ cardsToRender: this.state.swapiRepo.people });
-  }
+  // renderPeople = async() => {
+  //   if(!this.state.swapiRepo.people.length) {
+  //     await this.state.swapiRepo.cleanPeopleData("https://swapi.co/api/people/?page=1"); 
+  //   }
+  //   this.setState({ cardsToRender: this.state.swapiRepo.people });
+  // }
 
-  renderVehicles = async() => {
-    if(!this.state.swapiRepo.vehicles.length) {
-      await this.state.swapiRepo.cleanVehicleData("https://swapi.co/api/vehicles/?page=1")
-    }
-    this.setState({ cardsToRender: this.state.swapiRepo.vehicles });
-  }
+  // renderVehicles = async() => {
+  //   if(!this.state.swapiRepo.vehicles.length) {
+  //     await this.state.swapiRepo.cleanVehicleData("https://swapi.co/api/vehicles/?page=1")
+  //   }
+  //   this.setState({ cardsToRender: this.state.swapiRepo.vehicles });
+  // }
 
-  renderPlanets = async() => {
-    if(!this.state.swapiRepo.planets.length) {
-      await this.state.swapiRepo.cleanPlanetData("https://swapi.co/api/planets/?page=1");
-    }
-    this.setState({ cardsToRender: this.state.swapiRepo.planets });
-  }
+  // renderPlanets = async() => {
+  //   if(!this.state.swapiRepo.planets.length) {
+  //     await this.state.swapiRepo.cleanPlanetData("https://swapi.co/api/planets/?page=1");
+  //   }
+  //   this.setState({ cardsToRender: this.state.swapiRepo.planets });
+  // }
 
   toggleTarget = (target) => {
     if(!target.marked) {
@@ -53,11 +60,10 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div className="App">
-        <Nav renderPeople={ this.renderPeople } 
-             renderVehicles={ this.renderVehicles }
-             renderPlanets={ this.renderPlanets }
+        <Nav renderCards={ this.renderCards } 
         />
         <Main cardsToRender={ this.state.cardsToRender } 
               targetsToRender={ this.state.targets }
