@@ -8,7 +8,9 @@ import target from '../../styles/bullseye.svg';
 import deathStar from '../../styles/deathStar.png';
 import './Nav.css';
 
-const Nav = ({ renderPeople, renderPlanets, renderVehicles }) => {
+//import fetch from api and pass those fetch functions up into App
+
+const Nav = ({ renderCards }) => {
   return(
     <nav>
     <div className="title-cont">
@@ -19,18 +21,18 @@ const Nav = ({ renderPeople, renderPlanets, renderVehicles }) => {
     </div>
       <div className="nav-btns-cont">
         <button id="people"
-                onClick={ renderPeople }
+                onClick={ () => renderCards("people") }
         >
           <Link to='/people'>
             <img className="nav-img" src={ people } alt="search people" />
           </Link>
         </button>
-        <button onClick={ renderPlanets }>
+        <button onClick={ () => renderCards("planets") }>
           <Link to='/planets'>
             <img className="nav-img" src={ planet } alt="search people" />
           </Link>
         </button>
-        <button onClick={ renderVehicles }>
+        <button onClick={ () => renderCards("vehicles") }>
           <Link to='/vehicles'>
             <img className="nav-img" src={ vehicle } alt="search people" />
           </Link>

@@ -16,7 +16,7 @@ hr {
   position: relative;
   background-color: #ffffff3b;
   width: 260px;
-  height: 240px;
+  height: fit-content;
   padding-top: 7px;
   border-radius: 19px;
   margin: 10px;
