@@ -1,7 +1,42 @@
+@font-face { font-family: deathStar; src: url('../../styles/deathStar.otf'); } 
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
 .Home {
-  width: 270px;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin:  20px auto;
+  height: 600px;
+  perspective: 400px;
+  min-width: 300px;
+  width: 80%;
+  max-width: 600px;
   background-color: #ffffff1f;
+  overflow: hidden;
+  color: white;
+  font-family: deathStar, sans-serif;
+  font-size: 300%;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: -100px;
+  transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+  animation-iteration-count:infinite;
 }
 
 p {

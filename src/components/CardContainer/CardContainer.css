@@ -23,3 +23,9 @@
   width: 600px;
   margin: 50px auto;
 }
+
+@media only screen and (max-width: 570px) {
+  .CardContainer {
+    padding: 50px 20px;
+  }  
+}

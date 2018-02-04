@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { shallow } from 'enzyme';
 import CardContainer from './CardContainer.js';
@@ -24,5 +25,4 @@ describe('CardContainer', () => {
     )
     expect(wrapper).toMatchSnapshot()
   })
-
 })

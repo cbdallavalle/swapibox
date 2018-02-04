@@ -1,15 +1,24 @@
+.Favorites {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 100px;
+  min-height: 70vh;
+}
+
 .no-targets-cont {
-  width: 80%;
-  margin: 50px auto;
-  height: 500px;
-  background-color: #ffffff3b;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px auto;
+  height: 500px;
+  width: 80%;
+  background-color: #ffffff3b;
 }
 
 .no-targets {
-  font-size: 40px;
   color: #191919;
   font-family: impact;
+  font-size: 40px;
 }
