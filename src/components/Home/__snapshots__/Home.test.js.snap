@@ -4,7 +4,35 @@ exports[`should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Home />,
+  Symbol(enzyme.__unrendered__): <Home
+    filmCrawl={
+        Object {
+            "crawl": "It is a period of civil war.
+        Rebel scum spaceships, striking
+        from a hidden base, have won
+        their first and only victory against
+        the great Galactic Empire.
+        
+        During the battle, Rebel
+        scum spies managed to steal secret
+        plans to the Empire's
+        ultimate weapon, the DEATH
+        STAR, an armored space
+        station with enough power
+        to destroy an entire planet.
+        
+        Pursued by the Empire's
+        finest agents, Princess
+        Leia flees home aboard her
+        starship, custodian of the
+        stolen plans that can enslave her
+        people and restore
+order to the galaxy....",
+            "date": "1977-05-25",
+            "title": "No Hope",
+          }
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -21,13 +49,33 @@ ShallowWrapper {
         className="crawl"
 >
         <h1>
-                NO HOPE
+                No Hope
         </h1>
         <h2>
-                1997-05-25
+                1977-05-25
         </h2>
         <p>
-                It is a period of civil war. Rebel scum spaceships, striking from a hidden base, have won their first and only victory against the great Galactic Empire. During the battle, Rebel scum spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s finest agents, Princess Leia flees home aboard her starship, custodian of the stolen plans that can enslave that rebel scum and restore order to the galaxy…
+                It is a period of civil war.
+                Rebel scum spaceships, striking
+                from a hidden base, have won
+                their first and only victory against
+                the great Galactic Empire.
+                
+                During the battle, Rebel
+                scum spies managed to steal secret
+                plans to the Empire's
+                ultimate weapon, the DEATH
+                STAR, an armored space
+                station with enough power
+                to destroy an entire planet.
+                
+                Pursued by the Empire's
+                finest agents, Princess
+                Leia flees home aboard her
+                starship, custodian of the
+                stolen plans that can enslave her
+                people and restore
+order to the galaxy....
         </p>
 </div>,
       "className": "Home",
@@ -40,13 +88,33 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h1>
-            NO HOPE
+            No Hope
 </h1>,
           <h2>
-            1997-05-25
+            1977-05-25
 </h2>,
           <p>
-            It is a period of civil war. Rebel scum spaceships, striking from a hidden base, have won their first and only victory against the great Galactic Empire. During the battle, Rebel scum spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s finest agents, Princess Leia flees home aboard her starship, custodian of the stolen plans that can enslave that rebel scum and restore order to the galaxy…
+            It is a period of civil war.
+            Rebel scum spaceships, striking
+            from a hidden base, have won
+            their first and only victory against
+            the great Galactic Empire.
+            
+            During the battle, Rebel
+            scum spies managed to steal secret
+            plans to the Empire's
+            ultimate weapon, the DEATH
+            STAR, an armored space
+            station with enough power
+            to destroy an entire planet.
+            
+            Pursued by the Empire's
+            finest agents, Princess
+            Leia flees home aboard her
+            starship, custodian of the
+            stolen plans that can enslave her
+            people and restore
+order to the galaxy....
 </p>,
         ],
         "className": "crawl",
@@ -58,10 +126,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "NO HOPE",
+            "children": "No Hope",
           },
           "ref": null,
-          "rendered": "NO HOPE",
+          "rendered": "No Hope",
           "type": "h1",
         },
         Object {
@@ -69,10 +137,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "1997-05-25",
+            "children": "1977-05-25",
           },
           "ref": null,
-          "rendered": "1997-05-25",
+          "rendered": "1977-05-25",
           "type": "h2",
         },
         Object {
@@ -80,10 +148,50 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "It is a period of civil war. Rebel scum spaceships, striking from a hidden base, have won their first and only victory against the great Galactic Empire. During the battle, Rebel scum spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s finest agents, Princess Leia flees home aboard her starship, custodian of the stolen plans that can enslave that rebel scum and restore order to the galaxy…",
+            "children": "It is a period of civil war.
+Rebel scum spaceships, striking
+from a hidden base, have won
+their first and only victory against
+the great Galactic Empire.
+
+During the battle, Rebel
+scum spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+finest agents, Princess
+Leia flees home aboard her
+starship, custodian of the
+stolen plans that can enslave her
+people and restore
+order to the galaxy....",
           },
           "ref": null,
-          "rendered": "It is a period of civil war. Rebel scum spaceships, striking from a hidden base, have won their first and only victory against the great Galactic Empire. During the battle, Rebel scum spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s finest agents, Princess Leia flees home aboard her starship, custodian of the stolen plans that can enslave that rebel scum and restore order to the galaxy…",
+          "rendered": "It is a period of civil war.
+Rebel scum spaceships, striking
+from a hidden base, have won
+their first and only victory against
+the great Galactic Empire.
+
+During the battle, Rebel
+scum spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+finest agents, Princess
+Leia flees home aboard her
+starship, custodian of the
+stolen plans that can enslave her
+people and restore
+order to the galaxy....",
           "type": "p",
         },
       ],
@@ -101,13 +209,33 @@ ShallowWrapper {
           className="crawl"
 >
           <h1>
-                    NO HOPE
+                    No Hope
           </h1>
           <h2>
-                    1997-05-25
+                    1977-05-25
           </h2>
           <p>
-                    It is a period of civil war. Rebel scum spaceships, striking from a hidden base, have won their first and only victory against the great Galactic Empire. During the battle, Rebel scum spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s finest agents, Princess Leia flees home aboard her starship, custodian of the stolen plans that can enslave that rebel scum and restore order to the galaxy…
+                    It is a period of civil war.
+                    Rebel scum spaceships, striking
+                    from a hidden base, have won
+                    their first and only victory against
+                    the great Galactic Empire.
+                    
+                    During the battle, Rebel
+                    scum spies managed to steal secret
+                    plans to the Empire's
+                    ultimate weapon, the DEATH
+                    STAR, an armored space
+                    station with enough power
+                    to destroy an entire planet.
+                    
+                    Pursued by the Empire's
+                    finest agents, Princess
+                    Leia flees home aboard her
+                    starship, custodian of the
+                    stolen plans that can enslave her
+                    people and restore
+order to the galaxy....
           </p>
 </div>,
         "className": "Home",
@@ -120,13 +248,33 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h1>
-              NO HOPE
+              No Hope
 </h1>,
             <h2>
-              1997-05-25
+              1977-05-25
 </h2>,
             <p>
-              It is a period of civil war. Rebel scum spaceships, striking from a hidden base, have won their first and only victory against the great Galactic Empire. During the battle, Rebel scum spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s finest agents, Princess Leia flees home aboard her starship, custodian of the stolen plans that can enslave that rebel scum and restore order to the galaxy…
+              It is a period of civil war.
+              Rebel scum spaceships, striking
+              from a hidden base, have won
+              their first and only victory against
+              the great Galactic Empire.
+              
+              During the battle, Rebel
+              scum spies managed to steal secret
+              plans to the Empire's
+              ultimate weapon, the DEATH
+              STAR, an armored space
+              station with enough power
+              to destroy an entire planet.
+              
+              Pursued by the Empire's
+              finest agents, Princess
+              Leia flees home aboard her
+              starship, custodian of the
+              stolen plans that can enslave her
+              people and restore
+order to the galaxy....
 </p>,
           ],
           "className": "crawl",
@@ -138,10 +286,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "NO HOPE",
+              "children": "No Hope",
             },
             "ref": null,
-            "rendered": "NO HOPE",
+            "rendered": "No Hope",
             "type": "h1",
           },
           Object {
@@ -149,10 +297,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "1997-05-25",
+              "children": "1977-05-25",
             },
             "ref": null,
-            "rendered": "1997-05-25",
+            "rendered": "1977-05-25",
             "type": "h2",
           },
           Object {
@@ -160,10 +308,50 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "It is a period of civil war. Rebel scum spaceships, striking from a hidden base, have won their first and only victory against the great Galactic Empire. During the battle, Rebel scum spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s finest agents, Princess Leia flees home aboard her starship, custodian of the stolen plans that can enslave that rebel scum and restore order to the galaxy…",
+              "children": "It is a period of civil war.
+Rebel scum spaceships, striking
+from a hidden base, have won
+their first and only victory against
+the great Galactic Empire.
+
+During the battle, Rebel
+scum spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+finest agents, Princess
+Leia flees home aboard her
+starship, custodian of the
+stolen plans that can enslave her
+people and restore
+order to the galaxy....",
             },
             "ref": null,
-            "rendered": "It is a period of civil war. Rebel scum spaceships, striking from a hidden base, have won their first and only victory against the great Galactic Empire. During the battle, Rebel scum spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s finest agents, Princess Leia flees home aboard her starship, custodian of the stolen plans that can enslave that rebel scum and restore order to the galaxy…",
+            "rendered": "It is a period of civil war.
+Rebel scum spaceships, striking
+from a hidden base, have won
+their first and only victory against
+the great Galactic Empire.
+
+During the battle, Rebel
+scum spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+finest agents, Princess
+Leia flees home aboard her
+starship, custodian of the
+stolen plans that can enslave her
+people and restore
+order to the galaxy....",
             "type": "p",
           },
         ],

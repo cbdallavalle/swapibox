@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Nav
+    getFilmCrawl={[Function]}
     renderCards={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -24,6 +25,7 @@ ShallowWrapper {
           className="title-cont"
 >
           <Link
+                    onClick={[Function]}
                     replace={false}
                     to="/"
           >
@@ -116,6 +118,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <Link
+            onClick={[Function]}
             replace={false}
             to="/"
 >
@@ -146,6 +149,7 @@ ShallowWrapper {
                 The Imperial Almanac
 </h1>,
             ],
+            "onClick": [Function],
             "replace": false,
             "to": "/",
           },
@@ -479,6 +483,7 @@ ShallowWrapper {
             className="title-cont"
 >
             <Link
+                        onClick={[Function]}
                         replace={false}
                         to="/"
             >
@@ -571,6 +576,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <Link
+              onClick={[Function]}
               replace={false}
               to="/"
 >
@@ -601,6 +607,7 @@ ShallowWrapper {
                   The Imperial Almanac
 </h1>,
               ],
+              "onClick": [Function],
               "replace": false,
               "to": "/",
             },

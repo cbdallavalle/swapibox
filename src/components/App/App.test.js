@@ -25,6 +25,11 @@ describe('App methods', () => {
     expect(wrapper.state()).toEqual(mockData.updateState);
   })
 
+  it('should set state with a random movie object if getFilmCrawl is called', async() => {
+    await wrapper.instance().getFilmCrawl();
+    expect(wrapper.state().filmCrawl).not.toEqual(mockData.updateState.filmCrawl);
+  })
+
   it('should set state with cards to render if renderCards is called', async() => {
     await wrapper.instance().renderCards('vehicles');
     expect(wrapper.state().cardsToRender.length).toEqual(10)

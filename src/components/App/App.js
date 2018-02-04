@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import swapiRepository from '../../helper.js';
 import Nav from '../Nav/Nav';
 import Main from '../Main/Main';
+import defaultCrawl from './defaultCrawl';
 import './App.css';
 
 class App extends Component {
@@ -10,13 +11,20 @@ class App extends Component {
     this.state = {
       cardsToRender: [],
       swapiRepo: {},
-      targets: []
+      targets: [],
+      filmCrawl: defaultCrawl
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     const swapiRepo = new swapiRepository();
     this.setState({ swapiRepo });
+  }
+
+  getFilmCrawl = async() => {
+    const randomFilm = Math.floor(Math.random() * (7 - 1)) + 1;
+    await this.state.swapiRepo.getFilmCrawl(randomFilm);
+    this.setState({ filmCrawl: this.state.swapiRepo.filmCrawl });
   }
 
   renderCards = async(type) => {
@@ -42,9 +50,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav renderCards={ this.renderCards } 
+        <Nav 
+          renderCards={ this.renderCards }
+          getFilmCrawl={ this.getFilmCrawl } 
         />
         <Main 
+          filmCrawl={ this.state.filmCrawl }
           cardsToRender={ this.state.cardsToRender } 
           targetsToRender={ this.state.targets }
           toggleTarget={ this.toggleTarget }

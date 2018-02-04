@@ -3,6 +3,7 @@ class swapiRepository {
     this.people = [];
     this.planets = [];
     this.vehicles = [];
+    this.filmCrawl = {};
   }
 
   async fetchData(url) {
@@ -17,6 +18,16 @@ class swapiRepository {
     } catch (error) {
       throw new Error('cannot load data at this time :(') ; 
     }
+  }
+
+  async getFilmCrawl(number) {
+    const rootUrl = `https://swapi.co/api/films/${number}/`
+    const fetchedFilm = await this.fetchData(rootUrl);
+    this.filmCrawl = {
+      title:fetchedFilm.title,
+      date: fetchedFilm.release_date,
+      crawl: fetchedFilm.opening_crawl
+    };
   }
 
   async cleanData(type) {
