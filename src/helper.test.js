@@ -61,6 +61,20 @@ describe('fetchData', () => {
   })
 })
 
+describe('getFilmCrawl', () => {
+  const swapiRepo = new swapiRepository;
+
+  it('should call fetch', () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: () => Promise.resolve(mockData.mockFetch)
+    }))
+    expect(window.fetch).not.toHaveBeenCalled();
+    swapiRepo.getFilmCrawl(7)
+    expect(window.fetch).toHaveBeenCalled();
+  })
+})
+
 describe('cleanData', () => {
   let swapiRepo;
 

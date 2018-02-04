@@ -19,10 +19,38 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Nav
+          getFilmCrawl={[Function]}
           renderCards={[Function]}
 />,
         <Main
           cardsToRender={Array []}
+          filmCrawl={
+                    Object {
+                              "crawl": "It is a period of civil war.
+                    Rebel scum spaceships, striking
+                    from a hidden base, have won
+                    their first and only victory against
+                    the great Galactic Empire.
+                    
+                    During the battle, Rebel
+                    scum spies managed to steal secret
+                    plans to the Empire's
+                    ultimate weapon, the DEATH
+                    STAR, an armored space
+                    station with enough power
+                    to destroy an entire planet.
+                    
+                    Pursued by the Empire's
+                    finest agents, Princess
+                    Leia flees home aboard her
+                    starship, custodian of the
+                    stolen plans that can enslave her
+                    people and restore
+order to the galaxy....",
+                              "date": "1977-05-25",
+                              "title": "No Hope",
+                            }
+          }
           targetsToRender={Array []}
           toggleTarget={[Function]}
 />,
@@ -36,6 +64,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "getFilmCrawl": [Function],
           "renderCards": [Function],
         },
         "ref": null,
@@ -48,6 +77,31 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "cardsToRender": Array [],
+          "filmCrawl": Object {
+            "crawl": "It is a period of civil war.
+Rebel scum spaceships, striking
+from a hidden base, have won
+their first and only victory against
+the great Galactic Empire.
+
+During the battle, Rebel
+scum spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+finest agents, Princess
+Leia flees home aboard her
+starship, custodian of the
+stolen plans that can enslave her
+people and restore
+order to the galaxy....",
+            "date": "1977-05-25",
+            "title": "No Hope",
+          },
           "targetsToRender": Array [],
           "toggleTarget": [Function],
         },
@@ -66,10 +120,38 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Nav
+            getFilmCrawl={[Function]}
             renderCards={[Function]}
 />,
           <Main
             cardsToRender={Array []}
+            filmCrawl={
+                        Object {
+                                    "crawl": "It is a period of civil war.
+                        Rebel scum spaceships, striking
+                        from a hidden base, have won
+                        their first and only victory against
+                        the great Galactic Empire.
+                        
+                        During the battle, Rebel
+                        scum spies managed to steal secret
+                        plans to the Empire's
+                        ultimate weapon, the DEATH
+                        STAR, an armored space
+                        station with enough power
+                        to destroy an entire planet.
+                        
+                        Pursued by the Empire's
+                        finest agents, Princess
+                        Leia flees home aboard her
+                        starship, custodian of the
+                        stolen plans that can enslave her
+                        people and restore
+order to the galaxy....",
+                                    "date": "1977-05-25",
+                                    "title": "No Hope",
+                                  }
+            }
             targetsToRender={Array []}
             toggleTarget={[Function]}
 />,
@@ -83,6 +165,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "getFilmCrawl": [Function],
             "renderCards": [Function],
           },
           "ref": null,
@@ -95,6 +178,31 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "cardsToRender": Array [],
+            "filmCrawl": Object {
+              "crawl": "It is a period of civil war.
+Rebel scum spaceships, striking
+from a hidden base, have won
+their first and only victory against
+the great Galactic Empire.
+
+During the battle, Rebel
+scum spies managed to steal secret
+plans to the Empire's
+ultimate weapon, the DEATH
+STAR, an armored space
+station with enough power
+to destroy an entire planet.
+
+Pursued by the Empire's
+finest agents, Princess
+Leia flees home aboard her
+starship, custodian of the
+stolen plans that can enslave her
+people and restore
+order to the galaxy....",
+              "date": "1977-05-25",
+              "title": "No Hope",
+            },
             "targetsToRender": Array [],
             "toggleTarget": [Function],
           },

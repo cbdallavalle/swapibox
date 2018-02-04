@@ -6,11 +6,14 @@ import CardContainer from '../CardContainer/CardContainer';
 import Home from '../Home/Home';
 import './Main.css';
 
-const Main = ({ cardsToRender, targetsToRender, toggleTarget }) => {
+const Main = ({ filmCrawl, cardsToRender, targetsToRender, toggleTarget }) => {
   return (
     <main>
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/' component={ () => 
+          <Home filmCrawl={ filmCrawl }
+          /> } 
+        />
         <Route path='/people' component={ () => 
           <CardContainer 
             cardsToRender={ cardsToRender } 
@@ -40,9 +43,10 @@ const Main = ({ cardsToRender, targetsToRender, toggleTarget }) => {
   );
 };
 
-const { object, func, arrayOf } = PropTypes;
+const { object, func, arrayOf, objectOf, string } = PropTypes;
 
 Main.propTypes = {
+  filmCrawl: objectOf(string),
   cardsToRender: arrayOf(object).isRequired,
   targetsToRender: arrayOf(object).isRequired,
   toggleTarget: func.isRequired

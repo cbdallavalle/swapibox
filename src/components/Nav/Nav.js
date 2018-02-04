@@ -9,11 +9,14 @@ import target from '../../styles/bullseye.svg';
 import deathStar from '../../styles/deathStar.png';
 import './Nav.css';
 
-const Nav = ({ renderCards }) => {
+const Nav = ({ renderCards, getFilmCrawl }) => {
   return (
     <nav>
       <div className="title-cont">
-        <Link to='/'>
+        <Link 
+          to='/'
+          onClick={ getFilmCrawl }
+        >
           <img src={empireImg} alt="empire logo" id="empire-logo" />
           <h1>The Imperial Almanac</h1>
         </Link>
@@ -52,7 +55,8 @@ const Nav = ({ renderCards }) => {
 const { func } = PropTypes;
 
 Nav.propTypes = {
-  renderCards: func.isRequired
+  renderCards: func.isRequired,
+  getFilmCrawl: func.isRequired
 };
 
 export default Nav;

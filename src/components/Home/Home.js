@@ -1,29 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Home.css';
 
-const Home = () => {
+const Home = ({ filmCrawl }) => {
   return (
     <article className="Home">
       <div className="crawl">
-        <h1>NO HOPE</h1>
-        <h2>1997-05-25</h2>
+        <h1>{ filmCrawl.title }</h1>
+        <h2>{ filmCrawl.date }</h2>
         <p> 
-          It is a period of civil war. 
-          Rebel scum spaceships, striking from a hidden base, 
-          have won their first and only victory 
-          against the great Galactic Empire. During the battle, 
-          Rebel scum spies managed to steal secret plans to the 
-          Empire’s ultimate weapon, the DEATH STAR, an armored space 
-          station with enough power to destroy an entire planet.
-
-          Pursued by the Empire’s finest agents, 
-          Princess Leia flees home aboard her starship, 
-          custodian of the stolen plans that can enslave that rebel scum 
-          and restore order to the galaxy… 
+          { filmCrawl.crawl }
         </p>
       </div>
     </article>
   );
+};
+
+const { shape, string } = PropTypes;
+
+Home.propTypes = {
+  filmCrawl: shape({
+    title: string.isRequired,
+    date: string.isRequired,
+    crawl: string.isRequired
+  })
 };
 
 export default Home;

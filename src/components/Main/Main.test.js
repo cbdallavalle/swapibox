@@ -7,13 +7,16 @@ import Home from '../Home/Home';
 import CardContainer from '../CardContainer/CardContainer';
 import Favorites from '../Favorites/Favorites';
 import Main from './Main';
+import mockData from '../../mockData/mockData';
 
 //is snapshot a better test here?
 
 describe('Router', ()=> {
   const mockToggleTargets = jest.fn();
   const main = 
-    <Main cardsToRender={ [] }
+    <Main 
+      filmCrawl={mockData.defaultState.filmCrawl}
+      cardsToRender={ [] }
       targetsToRender={ [] }
       toggleTarget={ mockToggleTargets }
     />
