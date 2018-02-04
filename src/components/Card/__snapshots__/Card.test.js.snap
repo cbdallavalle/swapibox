@@ -7,10 +7,12 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Card
     card={
         Object {
-            "homePop": "200000",
-            "homeworld": "Tatooine",
+            "info": Object {
+              "homePop": "200000",
+              "homeworld": "Tatooine",
+              "species": "Human",
+            },
             "name": "Darth Vader",
-            "species": "Human",
           }
     }
     toggleTarget={[Function]}
@@ -28,45 +30,63 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <img
+          alt="target"
+          className="target-img"
+          id="displayTarget"
+          src="bullseye.svg"
+/>,
         <h2>
           Darth Vader
 </h2>,
         <hr />,
-        <div>
-          <img
-                    alt="target"
-                    className="target-img"
-                    src="bullseye.svg"
-          />
+        Array [
           <h4>
-                    <span>
-                              species:
-                    </span>
-                     
-                    Human
-          </h4>
+            <span>
+                        homeworld
+                        :
+            </span>
+             
+            Tatooine
+</h4>,
           <h4>
-                    <span>
-                              homeworld:
-                    </span>
-                     
-                    Tatooine
-          </h4>
+            <span>
+                        species
+                        :
+            </span>
+             
+            Human
+</h4>,
           <h4>
-                    <span>
-                              population:
-                    </span>
-                     
-                    200000
-          </h4>
-</div>,
+            <span>
+                        homePop
+                        :
+            </span>
+             
+            200000
+</h4>,
+        ],
       ],
-      "className": "cards",
+      "className": "cards clickable",
       "id": undefined,
       "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "target",
+          "className": "target-img",
+          "id": "displayTarget",
+          "src": "bullseye.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -89,36 +109,16 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "0",
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <img
-              alt="target"
-              className="target-img"
-              src="bullseye.svg"
-/>,
-            <h4>
-              <span>
-                            species:
-              </span>
-               
-              Human
-</h4>,
-            <h4>
-              <span>
-                            homeworld:
-              </span>
-               
-              Tatooine
-</h4>,
-            <h4>
-              <span>
-                            population:
-              </span>
-               
-              200000
-</h4>,
+            <span>
+              homeworld
+              :
+</span>,
+            " ",
+            "Tatooine",
           ],
         },
         "ref": null,
@@ -128,109 +128,98 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "target",
-              "className": "target-img",
-              "src": "bullseye.svg",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "children": Array [
-                <span>
-                  species:
-</span>,
-                " ",
-                "Human",
+                "homeworld",
+                ":",
               ],
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "species:",
-                },
-                "ref": null,
-                "rendered": "species:",
-                "type": "span",
-              },
-              " ",
-              "Human",
+              "homeworld",
+              ":",
             ],
-            "type": "h4",
+            "type": "span",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span>
-                  homeworld:
-</span>,
-                " ",
-                "Tatooine",
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "homeworld:",
-                },
-                "ref": null,
-                "rendered": "homeworld:",
-                "type": "span",
-              },
-              " ",
-              "Tatooine",
-            ],
-            "type": "h4",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span>
-                  population:
-</span>,
-                " ",
-                "200000",
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "population:",
-                },
-                "ref": null,
-                "rendered": "population:",
-                "type": "span",
-              },
-              " ",
-              "200000",
-            ],
-            "type": "h4",
-          },
+          " ",
+          "Tatooine",
         ],
-        "type": "div",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              species
+              :
+</span>,
+            " ",
+            "Human",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "species",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "species",
+              ":",
+            ],
+            "type": "span",
+          },
+          " ",
+          "Human",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              homePop
+              :
+</span>,
+            " ",
+            "200000",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "homePop",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "homePop",
+              ":",
+            ],
+            "type": "span",
+          },
+          " ",
+          "200000",
+        ],
+        "type": "h4",
       },
     ],
     "type": "article",
@@ -242,45 +231,63 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <img
+            alt="target"
+            className="target-img"
+            id="displayTarget"
+            src="bullseye.svg"
+/>,
           <h2>
             Darth Vader
 </h2>,
           <hr />,
-          <div>
-            <img
-                        alt="target"
-                        className="target-img"
-                        src="bullseye.svg"
-            />
+          Array [
             <h4>
-                        <span>
-                                    species:
-                        </span>
-                         
-                        Human
-            </h4>
+              <span>
+                            homeworld
+                            :
+              </span>
+               
+              Tatooine
+</h4>,
             <h4>
-                        <span>
-                                    homeworld:
-                        </span>
-                         
-                        Tatooine
-            </h4>
+              <span>
+                            species
+                            :
+              </span>
+               
+              Human
+</h4>,
             <h4>
-                        <span>
-                                    population:
-                        </span>
-                         
-                        200000
-            </h4>
-</div>,
+              <span>
+                            homePop
+                            :
+              </span>
+               
+              200000
+</h4>,
+          ],
         ],
-        "className": "cards",
+        "className": "cards clickable",
         "id": undefined,
         "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "target",
+            "className": "target-img",
+            "id": "displayTarget",
+            "src": "bullseye.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -303,36 +310,16 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "0",
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <img
-                alt="target"
-                className="target-img"
-                src="bullseye.svg"
-/>,
-              <h4>
-                <span>
-                                species:
-                </span>
-                 
-                Human
-</h4>,
-              <h4>
-                <span>
-                                homeworld:
-                </span>
-                 
-                Tatooine
-</h4>,
-              <h4>
-                <span>
-                                population:
-                </span>
-                 
-                200000
-</h4>,
+              <span>
+                homeworld
+                :
+</span>,
+              " ",
+              "Tatooine",
             ],
           },
           "ref": null,
@@ -342,109 +329,98 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "target",
-                "className": "target-img",
-                "src": "bullseye.svg",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "children": Array [
-                  <span>
-                    species:
-</span>,
-                  " ",
-                  "Human",
+                  "homeworld",
+                  ":",
                 ],
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "species:",
-                  },
-                  "ref": null,
-                  "rendered": "species:",
-                  "type": "span",
-                },
-                " ",
-                "Human",
+                "homeworld",
+                ":",
               ],
-              "type": "h4",
+              "type": "span",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span>
-                    homeworld:
-</span>,
-                  " ",
-                  "Tatooine",
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "homeworld:",
-                  },
-                  "ref": null,
-                  "rendered": "homeworld:",
-                  "type": "span",
-                },
-                " ",
-                "Tatooine",
-              ],
-              "type": "h4",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span>
-                    population:
-</span>,
-                  " ",
-                  "200000",
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "population:",
-                  },
-                  "ref": null,
-                  "rendered": "population:",
-                  "type": "span",
-                },
-                " ",
-                "200000",
-              ],
-              "type": "h4",
-            },
+            " ",
+            "Tatooine",
           ],
-          "type": "div",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                species
+                :
+</span>,
+              " ",
+              "Human",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "species",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "species",
+                ":",
+              ],
+              "type": "span",
+            },
+            " ",
+            "Human",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                homePop
+                :
+</span>,
+              " ",
+              "200000",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "homePop",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "homePop",
+                ":",
+              ],
+              "type": "span",
+            },
+            " ",
+            "200000",
+          ],
+          "type": "h4",
         },
       ],
       "type": "article",
@@ -467,21 +443,13 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Card
     card={
         Object {
-            "climate": "temperate",
+            "info": Object {
+              "climate": "temperate",
+              "population": "2000000000",
+              "residents": "Leia Organa, Bail Prestor Organa, Raymus Antilles",
+              "terrain": "grasslands, mountains",
+            },
             "name": "Alderaan",
-            "population": "2000000000",
-            "residents": Array [
-              Object {
-                "resident": "Leia Organa",
-              },
-              Object {
-                "resident": "Bail Prestor Organa",
-              },
-              Object {
-                "resident": "Raymus Antilles",
-              },
-            ],
-            "terrain": "grasslands, mountains",
           }
     }
     toggleTarget={[Function]}
@@ -499,42 +467,71 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <img
+          alt="target"
+          className="target-img"
+          id="displayTarget"
+          src="bullseye.svg"
+/>,
         <h2>
           Alderaan
 </h2>,
         <hr />,
-        <div>
-          <img
-                    alt="target"
-                    className="target-img"
-                    src="bullseye.svg"
-          />
+        Array [
           <h4>
-                    <span>
-                              population: 
-                    </span>
-                    2000000000
-          </h4>
+            <span>
+                        terrain
+                        :
+            </span>
+             
+            grasslands, mountains
+</h4>,
           <h4>
-                    <span>
-                              terrain: 
-                    </span>
-                    grasslands, mountains
-          </h4>
+            <span>
+                        population
+                        :
+            </span>
+             
+            2000000000
+</h4>,
           <h4>
-                    <span>
-                              climate: 
-                    </span>
-                    temperate
-          </h4>
-</div>,
+            <span>
+                        climate
+                        :
+            </span>
+             
+            temperate
+</h4>,
+          <h4>
+            <span>
+                        residents
+                        :
+            </span>
+             
+            Leia Organa, Bail Prestor Organa, Raymus Antilles
+</h4>,
+        ],
       ],
-      "className": "cards",
+      "className": "cards clickable",
       "id": undefined,
       "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "target",
+          "className": "target-img",
+          "id": "displayTarget",
+          "src": "bullseye.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -557,33 +554,16 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "0",
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <img
-              alt="target"
-              className="target-img"
-              src="bullseye.svg"
-/>,
-            <h4>
-              <span>
-                            population: 
-              </span>
-              2000000000
-</h4>,
-            <h4>
-              <span>
-                            terrain: 
-              </span>
-              grasslands, mountains
-</h4>,
-            <h4>
-              <span>
-                            climate: 
-              </span>
-              temperate
-</h4>,
+            <span>
+              terrain
+              :
+</span>,
+            " ",
+            "grasslands, mountains",
           ],
         },
         "ref": null,
@@ -593,103 +573,136 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "target",
-              "className": "target-img",
-              "src": "bullseye.svg",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "children": Array [
-                <span>
-                  population: 
-</span>,
-                "2000000000",
+                "terrain",
+                ":",
               ],
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "population: ",
-                },
-                "ref": null,
-                "rendered": "population: ",
-                "type": "span",
-              },
-              "2000000000",
+              "terrain",
+              ":",
             ],
-            "type": "h4",
+            "type": "span",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span>
-                  terrain: 
-</span>,
-                "grasslands, mountains",
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "terrain: ",
-                },
-                "ref": null,
-                "rendered": "terrain: ",
-                "type": "span",
-              },
-              "grasslands, mountains",
-            ],
-            "type": "h4",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span>
-                  climate: 
-</span>,
-                "temperate",
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "climate: ",
-                },
-                "ref": null,
-                "rendered": "climate: ",
-                "type": "span",
-              },
-              "temperate",
-            ],
-            "type": "h4",
-          },
+          " ",
+          "grasslands, mountains",
         ],
-        "type": "div",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              population
+              :
+</span>,
+            " ",
+            "2000000000",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "population",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "population",
+              ":",
+            ],
+            "type": "span",
+          },
+          " ",
+          "2000000000",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              climate
+              :
+</span>,
+            " ",
+            "temperate",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "climate",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "climate",
+              ":",
+            ],
+            "type": "span",
+          },
+          " ",
+          "temperate",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              residents
+              :
+</span>,
+            " ",
+            "Leia Organa, Bail Prestor Organa, Raymus Antilles",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "residents",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "residents",
+              ":",
+            ],
+            "type": "span",
+          },
+          " ",
+          "Leia Organa, Bail Prestor Organa, Raymus Antilles",
+        ],
+        "type": "h4",
       },
     ],
     "type": "article",
@@ -701,42 +714,71 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <img
+            alt="target"
+            className="target-img"
+            id="displayTarget"
+            src="bullseye.svg"
+/>,
           <h2>
             Alderaan
 </h2>,
           <hr />,
-          <div>
-            <img
-                        alt="target"
-                        className="target-img"
-                        src="bullseye.svg"
-            />
+          Array [
             <h4>
-                        <span>
-                                    population: 
-                        </span>
-                        2000000000
-            </h4>
+              <span>
+                            terrain
+                            :
+              </span>
+               
+              grasslands, mountains
+</h4>,
             <h4>
-                        <span>
-                                    terrain: 
-                        </span>
-                        grasslands, mountains
-            </h4>
+              <span>
+                            population
+                            :
+              </span>
+               
+              2000000000
+</h4>,
             <h4>
-                        <span>
-                                    climate: 
-                        </span>
-                        temperate
-            </h4>
-</div>,
+              <span>
+                            climate
+                            :
+              </span>
+               
+              temperate
+</h4>,
+            <h4>
+              <span>
+                            residents
+                            :
+              </span>
+               
+              Leia Organa, Bail Prestor Organa, Raymus Antilles
+</h4>,
+          ],
         ],
-        "className": "cards",
+        "className": "cards clickable",
         "id": undefined,
         "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "target",
+            "className": "target-img",
+            "id": "displayTarget",
+            "src": "bullseye.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -759,33 +801,16 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "0",
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <img
-                alt="target"
-                className="target-img"
-                src="bullseye.svg"
-/>,
-              <h4>
-                <span>
-                                population: 
-                </span>
-                2000000000
-</h4>,
-              <h4>
-                <span>
-                                terrain: 
-                </span>
-                grasslands, mountains
-</h4>,
-              <h4>
-                <span>
-                                climate: 
-                </span>
-                temperate
-</h4>,
+              <span>
+                terrain
+                :
+</span>,
+              " ",
+              "grasslands, mountains",
             ],
           },
           "ref": null,
@@ -795,103 +820,136 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "target",
-                "className": "target-img",
-                "src": "bullseye.svg",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "children": Array [
-                  <span>
-                    population: 
-</span>,
-                  "2000000000",
+                  "terrain",
+                  ":",
                 ],
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "population: ",
-                  },
-                  "ref": null,
-                  "rendered": "population: ",
-                  "type": "span",
-                },
-                "2000000000",
+                "terrain",
+                ":",
               ],
-              "type": "h4",
+              "type": "span",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span>
-                    terrain: 
-</span>,
-                  "grasslands, mountains",
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "terrain: ",
-                  },
-                  "ref": null,
-                  "rendered": "terrain: ",
-                  "type": "span",
-                },
-                "grasslands, mountains",
-              ],
-              "type": "h4",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span>
-                    climate: 
-</span>,
-                  "temperate",
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "climate: ",
-                  },
-                  "ref": null,
-                  "rendered": "climate: ",
-                  "type": "span",
-                },
-                "temperate",
-              ],
-              "type": "h4",
-            },
+            " ",
+            "grasslands, mountains",
           ],
-          "type": "div",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                population
+                :
+</span>,
+              " ",
+              "2000000000",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "population",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "population",
+                ":",
+              ],
+              "type": "span",
+            },
+            " ",
+            "2000000000",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                climate
+                :
+</span>,
+              " ",
+              "temperate",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "climate",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "climate",
+                ":",
+              ],
+              "type": "span",
+            },
+            " ",
+            "temperate",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                residents
+                :
+</span>,
+              " ",
+              "Leia Organa, Bail Prestor Organa, Raymus Antilles",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "residents",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "residents",
+                ":",
+              ],
+              "type": "span",
+            },
+            " ",
+            "Leia Organa, Bail Prestor Organa, Raymus Antilles",
+          ],
+          "type": "h4",
         },
       ],
       "type": "article",
@@ -914,10 +972,12 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Card
     card={
         Object {
-            "model": "Digger Crawler",
+            "info": Object {
+              "model": "Digger Crawler",
+              "passengers": "30",
+              "vehicleClass": "wheeled",
+            },
             "name": "Sand Crawler",
-            "passengers": "30",
-            "vehicleClass": "wheeled",
           }
     }
     toggleTarget={[Function]}
@@ -935,40 +995,63 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <img
+          alt="target"
+          className="target-img"
+          id="noTargetDisplay"
+          src="bullseye.svg"
+/>,
         <h2>
           Sand Crawler
 </h2>,
         <hr />,
-        <div>
+        Array [
           <h4>
-                    <span>
-                              model:
-                    </span>
-                     
-                    Digger Crawler
-          </h4>
+            <span>
+                        model
+                        :
+            </span>
+             
+            Digger Crawler
+</h4>,
           <h4>
-                    <span>
-                              class:
-                    </span>
-                     
-                    wheeled
-          </h4>
+            <span>
+                        passengers
+                        :
+            </span>
+             
+            30
+</h4>,
           <h4>
-                    <span>
-                              passengers:
-                    </span>
-                     
-                    30
-          </h4>
-</div>,
+            <span>
+                        vehicleClass
+                        :
+            </span>
+             
+            wheeled
+</h4>,
+        ],
       ],
-      "className": "cards",
+      "className": "cards notClickable",
       "id": undefined,
       "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "target",
+          "className": "target-img",
+          "id": "noTargetDisplay",
+          "src": "bullseye.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -991,31 +1074,16 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "0",
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h4>
-              <span>
-                            model:
-              </span>
-               
-              Digger Crawler
-</h4>,
-            <h4>
-              <span>
-                            class:
-              </span>
-               
-              wheeled
-</h4>,
-            <h4>
-              <span>
-                            passengers:
-              </span>
-               
-              30
-</h4>,
+            <span>
+              model
+              :
+</span>,
+            " ",
+            "Digger Crawler",
           ],
         },
         "ref": null,
@@ -1026,95 +1094,97 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <span>
-                  model:
-</span>,
-                " ",
-                "Digger Crawler",
+                "model",
+                ":",
               ],
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "model:",
-                },
-                "ref": null,
-                "rendered": "model:",
-                "type": "span",
-              },
-              " ",
-              "Digger Crawler",
+              "model",
+              ":",
             ],
-            "type": "h4",
+            "type": "span",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span>
-                  class:
-</span>,
-                " ",
-                "wheeled",
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "class:",
-                },
-                "ref": null,
-                "rendered": "class:",
-                "type": "span",
-              },
-              " ",
-              "wheeled",
-            ],
-            "type": "h4",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <span>
-                  passengers:
-</span>,
-                " ",
-                "30",
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "passengers:",
-                },
-                "ref": null,
-                "rendered": "passengers:",
-                "type": "span",
-              },
-              " ",
-              "30",
-            ],
-            "type": "h4",
-          },
+          " ",
+          "Digger Crawler",
         ],
-        "type": "div",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              passengers
+              :
+</span>,
+            " ",
+            "30",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "passengers",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "passengers",
+              ":",
+            ],
+            "type": "span",
+          },
+          " ",
+          "30",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              vehicleClass
+              :
+</span>,
+            " ",
+            "wheeled",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "vehicleClass",
+                ":",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "vehicleClass",
+              ":",
+            ],
+            "type": "span",
+          },
+          " ",
+          "wheeled",
+        ],
+        "type": "h4",
       },
     ],
     "type": "article",
@@ -1126,40 +1196,63 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <img
+            alt="target"
+            className="target-img"
+            id="noTargetDisplay"
+            src="bullseye.svg"
+/>,
           <h2>
             Sand Crawler
 </h2>,
           <hr />,
-          <div>
+          Array [
             <h4>
-                        <span>
-                                    model:
-                        </span>
-                         
-                        Digger Crawler
-            </h4>
+              <span>
+                            model
+                            :
+              </span>
+               
+              Digger Crawler
+</h4>,
             <h4>
-                        <span>
-                                    class:
-                        </span>
-                         
-                        wheeled
-            </h4>
+              <span>
+                            passengers
+                            :
+              </span>
+               
+              30
+</h4>,
             <h4>
-                        <span>
-                                    passengers:
-                        </span>
-                         
-                        30
-            </h4>
-</div>,
+              <span>
+                            vehicleClass
+                            :
+              </span>
+               
+              wheeled
+</h4>,
+          ],
         ],
-        "className": "cards",
+        "className": "cards notClickable",
         "id": undefined,
         "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "target",
+            "className": "target-img",
+            "id": "noTargetDisplay",
+            "src": "bullseye.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -1182,31 +1275,16 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "0",
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h4>
-                <span>
-                                model:
-                </span>
-                 
-                Digger Crawler
-</h4>,
-              <h4>
-                <span>
-                                class:
-                </span>
-                 
-                wheeled
-</h4>,
-              <h4>
-                <span>
-                                passengers:
-                </span>
-                 
-                30
-</h4>,
+              <span>
+                model
+                :
+</span>,
+              " ",
+              "Digger Crawler",
             ],
           },
           "ref": null,
@@ -1217,95 +1295,97 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <span>
-                    model:
-</span>,
-                  " ",
-                  "Digger Crawler",
+                  "model",
+                  ":",
                 ],
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "model:",
-                  },
-                  "ref": null,
-                  "rendered": "model:",
-                  "type": "span",
-                },
-                " ",
-                "Digger Crawler",
+                "model",
+                ":",
               ],
-              "type": "h4",
+              "type": "span",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span>
-                    class:
-</span>,
-                  " ",
-                  "wheeled",
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "class:",
-                  },
-                  "ref": null,
-                  "rendered": "class:",
-                  "type": "span",
-                },
-                " ",
-                "wheeled",
-              ],
-              "type": "h4",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <span>
-                    passengers:
-</span>,
-                  " ",
-                  "30",
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "passengers:",
-                  },
-                  "ref": null,
-                  "rendered": "passengers:",
-                  "type": "span",
-                },
-                " ",
-                "30",
-              ],
-              "type": "h4",
-            },
+            " ",
+            "Digger Crawler",
           ],
-          "type": "div",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                passengers
+                :
+</span>,
+              " ",
+              "30",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "passengers",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "passengers",
+                ":",
+              ],
+              "type": "span",
+            },
+            " ",
+            "30",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                vehicleClass
+                :
+</span>,
+              " ",
+              "wheeled",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "vehicleClass",
+                  ":",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "vehicleClass",
+                ":",
+              ],
+              "type": "span",
+            },
+            " ",
+            "wheeled",
+          ],
+          "type": "h4",
         },
       ],
       "type": "article",

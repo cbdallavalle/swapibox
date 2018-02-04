@@ -23,17 +23,21 @@ hr {
   border: 2px solid white;
 }
 
-.cards:hover {
+.clickable:hover {
   cursor: pointer;
   background-color: #ffffffad;
   outline: none;
 }
 
-.target-img {
+#displayTarget {
   width: 30px;
   position: absolute;
   top: 5px;
   right: 5px;
+}
+
+#noTargetDisplay {
+  display: none;
 }
 
 #marked {

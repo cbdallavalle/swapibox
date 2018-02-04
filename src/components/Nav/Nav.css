@@ -21,7 +21,7 @@
  }
 
  button {
-  padding: 6px 25px 24px 25px;
+  padding: 7px 16px;
   background-color: #ffffff3b;
   border: 2px solid white;
   border-left: none;
@@ -30,6 +30,7 @@
  button:hover,
  button:active,
  button:focus {
+  cursor: pointer;
   background-color: #ffffffad;
   outline: none;
  }
@@ -48,7 +49,6 @@
   align-items: center;
   margin: 25px auto;
   width: 100%;
-  height: 50px;
 }
 
 .nav-img {
@@ -88,7 +88,7 @@
   }
 
   button {
-    padding: 9px 20px 20px 20px;
+    padding: 12px 20px 9px 20px;
   }
 }
 

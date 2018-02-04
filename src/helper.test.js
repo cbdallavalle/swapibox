@@ -18,40 +18,126 @@ describe('default', () => {
 describe('fetchData', () => {
   const swapiRepo = new swapiRepository;
 
-  beforeEach( () => {
+  it('calls fetchData with the correct params', () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      json: () => Promise.resolve(mockData)
+      status: 200,
+      json: () => Promise.resolve(mockData.mockFetch)
     }))
+    expect(window.fetch).not.toHaveBeenCalled()
+    swapiRepo.fetchData('url')
+    expect(window.fetch).toHaveBeenCalledWith('url');
   })
 
-  it('should exist', async () => {
-    const something = await swapiRepo.fetchData("url")
-    expect(swapiRepo.fetchData("url")).toEqual(mockData)
+  it('fetchData should fetch a mock fetch data', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: () => Promise.resolve(mockData.mockFetch)
+    }))
+    const mockFetchData = await swapiRepo.fetchData("https://swapi.co/api/people/?page=1v");
+    expect(mockFetchData).toEqual(mockData.mockFetch);
+  })
+
+  it('should fetch with the correct params', async() => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: () => Promise.resolve(mockData.mockFetch)
+    }))
+
+    const expectParams = ["https://swapi.co/api/people/?page=1v"]
+
+    const mockFetchData = await swapiRepo.fetchData("https://swapi.co/api/people/?page=1v");
+    expect(window.fetch).toHaveBeenCalledWith(...expectParams)
+  })
+
+  it('should throw an error', () => {
+    window.fetch = jest.fn().mockImplementation(() =>  Promise.resolve({
+      status: 500
+      })
+    )
+
+    const expected = Error('cannot load data at this time :(')
+    const response = swapiRepo.fetchData("url")
+    expect(response).rejects.toEqual(expected);
   })
 })
 
+describe('cleanData', () => {
+  let swapiRepo;
 
-// swapiRepo = new swapiRepository();
-//     window.fetch = jest.fn().mockImplementation(() => {
-//       return (
-//         new Promise(resolve => {
-//           resolve(json: () => {
-//             return (
-//               new Promise(resolve => {
-//                 resolve(fetchArray: mockData)
-//                 })
-//               )
-//           })
-//         })
-//       )
-//     })
+  beforeEach(() => {
+    swapiRepo = new swapiRepository();
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: () => Promise.resolve(mockData.mockFetch)
+    }))
+  })
 
+  it('should call a window fetch', () => {
+    swapiRepo.cleanData('people');
+    expect(window.fetch).toHaveBeenCalled();
+  })  
+})
 
+describe('getDetails', () => {
+  let swapiRepo;
 
+  beforeEach(() => {
+    swapiRepo = new swapiRepository();
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: () => Promise.resolve(mockData.peopleData)
+    }))
+  })
 
+  it('should call fetch when people data is passed in', () => {
+    swapiRepo.getDetails(mockData.rawPeopleData, 'people');
+    expect(window.fetch).toHaveBeenCalled();
+  })
 
-// window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-//       json: () => Promise.resolve({
-//         groceries: mockGroceries,
-//       })
-//     }))
+  it('should call fetch when planet data is passed in', () => {
+    swapiRepo.getDetails(mockData.rawPlanetData, 'people');
+    expect(window.fetch).toHaveBeenCalled();
+  })
+
+  it('should not call fetch when vehicle data is passed in', () => {
+    swapiRepo.getDetails(mockData.rawVehicleData, 'vehicles');
+    expect(window.fetch).not.toHaveBeenCalled();
+  })
+})
+
+describe("the functions that compile objects ", () => {
+  const swapiRepo = new swapiRepository();
+  
+  it('buildDetails should return an object with name and info as keys', () => {
+    expect(swapiRepo.buildDetails('Leia', {})).toEqual({name: 'Leia', info: {}});
+  })
+
+  it('getPeopleInfo should return an object of people information', () => {
+    expect(swapiRepo.getPeopleInfo({name: "Tatooine", population: "200000"}, {name: "Human"}
+      )).toEqual({ homeworld: "Tatooine", species: "Human", homePop: "200000" })
+  })
+
+  it('getPlanetInfo should return an object of planet info', () => {
+    expect(swapiRepo.getPlanetInfo( mockData.rawPlanetData[0], 
+      [ "Leia Organa", "Bail Prestor Organa", "Raymus Antilles" ]
+    )).toEqual(mockData.planetData.info)
+  })
+
+  it('getVehicleInfo should return an object of vehicle info', () => {
+    expect(swapiRepo.getVehicleInfo(mockData.rawVehicleData[0]
+      )).toEqual(mockData.vehicleData.info)
+  })
+})
+
+describe("fetchResidents", () => {
+  it('should call fetch', () => {
+    let swapiRepo = new swapiRepository();
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: () => Promise.resolve(mockData.rawPlanetData)
+    }))
+
+    swapiRepo.fetchResidents(mockData.rawPlanetData[0].residents);
+    expect(window.fetch).toHaveBeenCalled();
+  })
+})

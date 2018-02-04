@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { shallow } from 'enzyme';
 import Card from './Card.js';
@@ -27,7 +28,6 @@ describe('Card', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-
   it('should match snapshot when passed data for vehicles', () => {
     wrapper = shallow(          
       <Card key={ 1 }
@@ -38,5 +38,14 @@ describe('Card', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('when a card is clicked, should call toggleTarget')
+  it('when a card is clicked, should call toggleTarget', () => {
+    wrapper = shallow(          
+      <Card key={ 1 }
+            card={ mockData.planetData }
+            toggleTarget={ mockToggleTarget }
+      />
+    )
+    wrapper.find('article').simulate('click');
+    expect(mockToggleTarget).toHaveBeenCalled();
+  })
 })

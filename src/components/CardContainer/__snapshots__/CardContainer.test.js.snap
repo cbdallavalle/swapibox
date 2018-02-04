@@ -8,10 +8,12 @@ ShallowWrapper {
     cardsToRender={
         Array [
             Object {
-              "homePop": "200000",
-              "homeworld": "Tatooine",
+              "info": Object {
+                "homePop": "200000",
+                "homeworld": "Tatooine",
+                "species": "Human",
+              },
               "name": "Darth Vader",
-              "species": "Human",
             },
           ]
     }
@@ -33,10 +35,12 @@ ShallowWrapper {
         <Card
           card={
                     Object {
-                              "homePop": "200000",
-                              "homeworld": "Tatooine",
+                              "info": Object {
+                                "homePop": "200000",
+                                "homeworld": "Tatooine",
+                                "species": "Human",
+                              },
                               "name": "Darth Vader",
-                              "species": "Human",
                             }
           }
           toggleTarget={[Function]}
@@ -52,10 +56,12 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "card": Object {
-            "homePop": "200000",
-            "homeworld": "Tatooine",
+            "info": Object {
+              "homePop": "200000",
+              "homeworld": "Tatooine",
+              "species": "Human",
+            },
             "name": "Darth Vader",
-            "species": "Human",
           },
           "toggleTarget": [Function],
         },
@@ -76,10 +82,12 @@ ShallowWrapper {
           <Card
             card={
                         Object {
-                                    "homePop": "200000",
-                                    "homeworld": "Tatooine",
+                                    "info": Object {
+                                      "homePop": "200000",
+                                      "homeworld": "Tatooine",
+                                      "species": "Human",
+                                    },
                                     "name": "Darth Vader",
-                                    "species": "Human",
                                   }
             }
             toggleTarget={[Function]}
@@ -95,10 +103,12 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "card": Object {
-              "homePop": "200000",
-              "homeworld": "Tatooine",
+              "info": Object {
+                "homePop": "200000",
+                "homeworld": "Tatooine",
+                "species": "Human",
+              },
               "name": "Darth Vader",
-              "species": "Human",
             },
             "toggleTarget": [Function],
           },

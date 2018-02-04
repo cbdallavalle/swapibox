@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { shallow } from 'enzyme';
 import Favorites from './Favorites.js';
@@ -10,7 +11,7 @@ describe('Favorites', () => {
   it('should match the snapshot when there are no cards to render', () => {
     wrapper = shallow(
       <Favorites targetsToRender={[]} 
-                 toggleTargets={ mockToggleTargets }
+                 toggleTarget={ mockToggleTargets }
       />
     )
   })
@@ -18,7 +19,7 @@ describe('Favorites', () => {
   it('should match the snapshot when there are cards to render', () => {
     wrapper = shallow(
       <Favorites targetsToRender={[ mockData.peopleData ]} 
-                 toggleTargets={ mockToggleTargets }
+                 toggleTarget={ mockToggleTargets }
       />
     )
   })
